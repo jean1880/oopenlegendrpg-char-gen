@@ -4,6 +4,20 @@
  */
 $navbar-inverse-link-color: #5AADBB;
 $icon-font-path: "../../bootstrap-sass/assets/fonts/bootstrap/";
+$fa-font-path: "../../bower_components/font-awesome/fonts";
+
+html body {
+    background-color: #E0E0E0;
+    .main {
+        background-color: transparent;
+    }
+
+    .container {
+        padding-top: 20px;
+        background-color: #FFF;
+        border-radius: 3px;
+    }
+}
 
 /**
  *  Do not remove the comments below. It's the markers used by wiredep to inject

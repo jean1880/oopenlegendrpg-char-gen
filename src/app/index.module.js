@@ -1,6 +1,6 @@
 (function () {
-  'use strict';
+    'use strict';
 
-  angular
-    .module('olcg', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngAria', 'ui.router', 'ui.bootstrap', 'toastr']);
+    angular
+        .module('olcg', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngAria', 'ui.router', 'ui.bootstrap', 'toastr']);
 })();

@@ -1,0 +1,12 @@
+<div>
+    <h2>Feats <button type="button"  ng-click="charGen.isFeatsCollapsed = !charGen.isFeatsCollapsed" class="btn btn-info"><i class="fa pull-right" ng-class="{'fa-plus-square': charGen.isFeatsCollapsed, 'fa-minus-square': !charGen.isFeatsCollapsed}"></i></button></h2>
+    <div uib-collapse="charGen.isAttributeCollapsed">
+        <h3>Reading a feat Description</h3>
+        <p>Below, each boon description includes the following elements.</p>
+        <p><strong>Cost</strong> This is the number of feat points required to take this feat. Characters get 6 feat points at 1st level, and 3 feat points each time they level up. If a feat has multiple tiers, the cost is the same for each tier of the feat, so higher tier abilities require purchasing the same feat repeatedly.</p>
+        <p><strong>Prerequisites</strong> Feats can have prerequisites that you must meet when you select it. They can either require a minimum attribute score or they can sometimes require other feats.</p>
+        <p><strong>Description</strong> This entry simply provides a general idea of what the feat could look like in the story.</p>
+        <p><strong>Effect</strong> This entry indicates the mechanical effects of the feat on the rules of the game.</p>
+        
+    </div>
+</div>
