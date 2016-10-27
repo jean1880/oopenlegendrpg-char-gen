@@ -1,4 +1,4 @@
-(function () {
+(function() {
     'use strict';
 
     angular.module('olcg')
@@ -19,18 +19,32 @@
             'description': 'Ageless and supernatural, you have either unlocked a mystical secret to immortality, become a legendary defender, transformed into an avatar of nature, or been granted immunity to the ravages time by some higher power.',
             'effect': 'Rooted in a superantural means of your choice, you become immune to the passage of time and the effects of old age. You do not age and cannot be harmed by magic that causes aging. You can choose to age in appearance, if you wish, but you can also choose to continually appear the same age.'
         }, {
-            'name': 'Alternate Form (I - III)',
-            'prerequisite': {
+            name: 'Alternate Form (I - III)',
+            id: 'alternateForm',
+            tiers: 3,
+            prerequisites: [{
                 attributes: {
-                    alteration: [2, 5, 7]
+                    alteration: 2
                 }
-            },
-            'tags': [
+            }, {
+                attributes: {
+                    alteration: 5
+                }
+            }, {
+                attributes: {
+                    alteration: 7
+                }
+            }],
+            tags: [
                 'Supernatural'
             ],
-            'cost': [3],
-            'description': 'Alternate form is an ability possessed by lyncanthropes (werewolves, werebears, wererats), druids, vampires, and other creatures capable of assuming <emphasis>specific</emphasis> forms.',
-            'effect': 'You gain the ability to shapeshift into a single form (you choose that form when purchasing this feat and it cannot be changed). Assuming your new form is a major action. When you assume your new form, you gain a pool of points equal to your Alteration score, which you may immediately spend to temporarily increase your physical attributes. You cannot raise any physical attribute to be greater than your Alteration score, unless the physical attribute is already equal to your Alteration. In that case, you may increase it by a maximum of one point. This increase cannot be used to meet prerequisites for feats, but it can be used to give you access to banes and boons that you would otherwise not be able to use in your normal form. Until you purchase this feat at tier 3, you cannot use the supernatural attributes of the chosen form.You return to your normal form immediately if you are reduced to zero hit points. You can also choose to voluntarily return to your usual form as a major action. Upon returning to your original form, your physical attributes return to their previous values.<ul><li>Tier 1 ∩┐╜ Your alternate form must be the same size as your normal form.</li><li>Tier 2 ∩┐╜ Your alternate form can be one size different from your normal size.</li><li>Tier 3 ∩┐╜ Your alternate form can be any size. In addition, you are able to use supernatural attributes for attacks (dragon∩┐╜s breath, nymph∩┐╜s charm, etc.) of your chosen form. Use your Alteration score for action rolls relating to these supernatural abilities.</li></ul>'
+            costs: [
+                3,
+                3,
+                3
+            ],
+            description: 'Alternate form is an ability possessed by lyncanthropes (werewolves, werebears, wererats), druids, vampires, and other creatures capable of assuming <emphasis>specific</emphasis> forms.',
+            effect: 'You gain the ability to shapeshift into a single form (you choose that form when purchasing this feat and it cannot be changed). Assuming your new form is a major action. When you assume your new form, you gain a pool of points equal to your Alteration score, which you may immediately spend to temporarily increase your physical attributes. You cannot raise any physical attribute to be greater than your Alteration score, unless the physical attribute is already equal to your Alteration. In that case, you may increase it by a maximum of one point. This increase cannot be used to meet prerequisites for feats, but it can be used to give you access to banes and boons that you would otherwise not be able to use in your normal form. Until you purchase this feat at tier 3, you cannot use the supernatural attributes of the chosen form.You return to your normal form immediately if you are reduced to zero hit points. You can also choose to voluntarily return to your usual form as a major action. Upon returning to your original form, your physical attributes return to their previous values.<ul><li>Tier 1 ∩┐╜ Your alternate form must be the same size as your normal form.</li><li>Tier 2 ∩┐╜ Your alternate form can be one size different from your normal size.</li><li>Tier 3 ∩┐╜ Your alternate form can be any size. In addition, you are able to use supernatural attributes for attacks (dragon∩┐╜s breath, nymph∩┐╜s charm, etc.) of your chosen form. Use your Alteration score for action rolls relating to these supernatural abilities.</li></ul>'
         }, {
             'name': 'Area Manipulation (I - V)',
             'prerequisite': {},
@@ -94,9 +108,10 @@
             'effect': 'When you purchase this feat, you create a permanent link between two attributes: one stronger (the primary attribute) and one weaker (the dependent attribute). When making action rolls with the dependent attribute, you may use your score in the primary attribute for damaging attacks, bane attacks, boon invocations, and other actions at the GM\'s discretion.This relationship is subject to  case -by - case approval by the GM.It must be logical and consistent with the story you are trying to tell.Furthermore, the GM should prevent players from creating illogical substitutions that are purely aimed at making their characters unreasonably powerful.Two examples of proper uses of this feat include an analytical warrior or martial artist who analyzes angles, leverage, and physics to substitute Logic for Might, or a a gunslinger who channels dark energy, giving her deadshot accuracy and substituting Entropy for Agility.For the purpose of meeting attribute prerequisites when purchasing feats, your dependent attribute is considered equal to that of your primary attribute score. < strong > Special < /strong>: This feat can only be purchased once. In addition, the primary attribute must be either social, mental, or supernatural, while the substituted attribute must be physical.'
         }, {
             'name': 'Bane Focus',
-            'prerequisite': [
-                banes: {
-                    'selected'
+            'prerequisite': [{
+                    banes: {
+                        'selected'
+                    }
                 }
             ],
             'tags': [
